@@ -1,3 +1,144 @@
+## Install and run this fork
+
+This fork runs the Graphiti examples with **DeepSeek API + local Ollama bge-m3 + Neo4j**.
+The commands below use **Windows PowerShell** from the repository root. Docker and an OpenAI
+API key are not required for this setup. DeepSeek API calls require a funded API account.
+
+### 1. Install Python dependencies
+
+Install Python 3.10 or newer (the recorded experiment used Python 3.10.14), Git, and
+[Ollama](https://ollama.com/). Then clone the fork and create a virtual environment:
+
+```powershell
+git clone https://github.com/hzy4869/graphiti_hzy.git
+cd graphiti_hzy
+python -m venv .venv
+.\.venv\Scripts\python.exe -m pip install --upgrade pip
+.\.venv\Scripts\python.exe -m pip install -e .
+.\.venv\Scripts\python.exe -m pip install "langgraph==1.2.20" "langchain-openai==1.7.4"
+```
+
+If the repository is already cloned, start with `python -m venv .venv` from its root.
+Dependencies are declared in `pyproject.toml`; there is no separate requirements file.
+The two explicit agent-package versions match the recorded experiment; the remaining
+dependencies use the ranges in `pyproject.toml`, so this is not a fully locked environment.
+Using the virtual environment's Python directly avoids PowerShell activation-policy issues.
+
+### 2. Start Ollama and download the embedding model
+
+Start the Ollama application, then run:
+
+```powershell
+ollama pull bge-m3
+ollama list
+```
+
+The code expects Ollama at `http://127.0.0.1:11434/v1` and uses 1,024-dimensional embeddings.
+If Ollama is not already running, use `ollama serve` in another terminal and keep it open.
+Installing the Python dependencies does not install Ollama or download the model.
+
+### 3. Configure DeepSeek and Neo4j
+
+Use a running Neo4j instance, either Neo4j AuraDB in the cloud or a local instance.
+Create `.env` only if it does not already exist:
+
+```powershell
+if (-not (Test-Path .env)) { Copy-Item .env.example .env }
+notepad .env
+```
+
+Fill these entries with your own credentials:
+
+```dotenv
+DEEPSEEK_API_KEY=YOUR_DEEPSEEK_API_KEY
+NEO4J_URI=neo4j+s://YOUR_INSTANCE.databases.neo4j.io
+NEO4J_USER=neo4j
+NEO4J_PASSWORD=YOUR_NEO4J_PASSWORD
+NEO4J_DATABASE=YOUR_DATABASE_NAME
+```
+
+For a local instance, use its connection URI, for example `bolt://localhost:7687`.
+`NEO4J_DATABASE` is optional: leave it blank to discover the default database. Use the actual
+database name if setting it explicitly. Leave `OPENAI_API_KEY` blank for these adapted examples.
+The scripts currently request DeepSeek model `deepseek-flash` at `https://api.deepseek.com`.
+Keep `.env` local; it is ignored by Git.
+
+### 4. Run the examples
+
+First verify extraction, local embeddings, graph storage, and search:
+
+```powershell
+.\.venv\Scripts\python.exe examples\quickstart\quickstart_neo4j.py
+```
+
+Then run the adapted LangGraph shoe-sales agent:
+
+```powershell
+.\.venv\Scripts\python.exe examples\langgraph-agent\agent_modified.py
+```
+
+The agent loads five products, prints its `group_id`, retrieves facts, calls the product tool,
+and answers a shoe-size question. For an interactive conversation, add `--interactive`.
+New agent runs create separate groups; use `--resume-group GROUP_ID` to reuse a previous group.
+The temporal-update demonstration is also available:
+
+```powershell
+.\.venv\Scripts\python.exe examples\jev\modified.py
+```
+
+### 5. Reproduce the repeated-update comparison
+
+Prepare a **new group** once and record preparation API usage:
+
+```powershell
+.\.venv\Scripts\python.exe examples\langgraph-agent\agent_updates.py `
+  --prepare-history examples\langgraph-agent\history_updates.json `
+  --prep-usage-file results\costed_updates\preparation.jsonl
+```
+
+Copy the printed group ID into the following command:
+
+```powershell
+$experimentGroup = 'REPLACE_WITH_THE_NEW_GROUP_ID'
+.\.venv\Scripts\python.exe examples\langgraph-agent\run_formal_updates.py `
+  --group $experimentGroup `
+  --prep-usage-file results\costed_updates\preparation.jsonl
+```
+
+The runner performs three read-only answers per condition in separate processes:
+Graphiti customer-fact recall versus full customer conversation history. Both conditions
+use the same catalog-only product search; history mode cannot retrieve customer-memory
+relations through that tool. Three answers reuse one preparation, not three independent graphs.
+Catalog fallback and manually seeded size facts are disabled by default; leave them disabled
+for this comparison.
+
+Outputs are saved under the printed `results/formal_updates_TIMESTAMP/` directory:
+
+- `runs.csv` and `summary.json`: per-run metrics and condition summaries.
+- Per-run `.log` and `.jsonl`: answers, tool traces, and usage evidence.
+- `total_cost_summary.json`: preparation plus answering API usage, including shared setup.
+- `manifest.json` and `source_snapshot/`: recorded environment and source identity.
+
+Preparation and answering both consume API tokens. Monetary costs remain unset unless verified
+prices are supplied. See [full cost accounting](examples/langgraph-agent/updates_cost_accounting.md)
+and [experiment controls](examples/langgraph-agent/updates_experiment_usage.md) for details.
+
+### 6. Run offline checks
+
+```powershell
+$env:GRAPHITI_TELEMETRY_ENABLED = 'false'
+.\.venv\Scripts\python.exe -m unittest discover `
+  -s examples/langgraph-agent -p 'test_*.py'
+```
+
+These checks mock database and model calls and do not require paid API requests.
+
+---
+
+The original upstream README follows below. Its provider requirements may differ from this fork's
+adapted examples.
+
+
 <p align="center">
   <a href="https://www.getzep.com/">
     <img src="https://github.com/user-attachments/assets/119c5682-9654-4257-8922-56b7cb8ffd73" width="150" alt="Zep Logo">

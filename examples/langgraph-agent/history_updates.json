@@ -1,0 +1,216 @@
+{
+  "case_id": "updates_01",
+  "synthetic": true,
+  "messages": [
+    {
+      "role": "user",
+      "content": "My current shoe size is US men's 8, my maximum budget is 120 USD, my required shoe color is white, and I must avoid wool.",
+      "timestamp": "2026-10-01T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-01T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Update my shoe size to US men's 9. This replaces my previous shoe size; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-02T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-02T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Change my maximum budget to 150 USD. This replaces my previous budget; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-03T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-03T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My required shoe color is now black. This replaces my previous color requirement; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-04T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-04T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My complete material restriction list is now: avoid leather. This list replaces all my previous material restrictions; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-05T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-05T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Update my shoe size to US men's 10. This replaces my previous shoe size; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-06T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-06T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Change my maximum budget to 110 USD. This replaces my previous budget; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-07T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-07T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My required shoe color is now grey. This replaces my previous color requirement; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-08T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-08T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My complete material restriction list is now: avoid synthetic materials. This list replaces all my previous material restrictions; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-09T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-09T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Update my shoe size to US men's 8.5. This replaces my previous shoe size; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-10T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-10T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Change my maximum budget to 80 USD. This replaces my previous budget; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-11T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-11T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My required shoe color is now blue. This replaces my previous color requirement; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-12T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-12T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My complete material restriction list is now: avoid wool and leather. This list replaces all my previous material restrictions; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-13T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-13T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Update my shoe size to US men's 11. This replaces my previous shoe size; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-14T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-14T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Change my maximum budget to 130 USD. This replaces my previous budget; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-15T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-15T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My required shoe color is now beige. This replaces my previous color requirement; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-16T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-16T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My complete material restriction list is now: avoid leather. This list replaces all my previous material restrictions; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-17T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-17T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Update my shoe size to US men's 9. This replaces my previous shoe size; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-18T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-18T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "Change my maximum budget to 90 USD. This replaces my previous budget; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-19T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-19T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My required shoe color is now black. This replaces my previous color requirement; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-20T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-20T12:00:01+00:00"
+    },
+    {
+      "role": "user",
+      "content": "My complete material restriction list is now: avoid wool. This list replaces all my previous material restrictions; all my other current requirements remain unchanged.",
+      "timestamp": "2026-10-21T12:00:00+00:00"
+    },
+    {
+      "role": "assistant",
+      "content": "Recorded your stated requirements.",
+      "timestamp": "2026-10-21T12:00:01+00:00"
+    }
+  ]
+}

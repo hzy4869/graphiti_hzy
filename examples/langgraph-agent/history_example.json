@@ -1,0 +1,12 @@
+{
+  "messages": [
+    {
+      "role": "user",
+      "content": "My shoe size is US men's 9, my budget is 100 USD, I prefer black shoes, and I must avoid wool."
+    },
+    {
+      "role": "assistant",
+      "content": "Understood. I will consider your size, budget, color preference and material restriction."
+    }
+  ]
+}

@@ -17,13 +17,10 @@ limitations under the License.
 import asyncio
 import json
 import logging
-import os
 from datetime import datetime, timezone
 from logging import INFO
 
-from dotenv import load_dotenv
-
-from graphiti_core import Graphiti
+from quickstart_deepseek_ollama_neo4j import create_graphiti
 from graphiti_core.nodes import EpisodeType
 from graphiti_core.search.search_config_recipes import NODE_HYBRID_SEARCH_RRF
 
@@ -42,18 +39,6 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
-load_dotenv()
-
-# Neo4j connection parameters
-# Make sure Neo4j Desktop is running with a local DBMS started
-neo4j_uri = os.environ.get('NEO4J_URI', 'bolt://localhost:7687')
-neo4j_user = os.environ.get('NEO4J_USER', 'neo4j')
-neo4j_password = os.environ.get('NEO4J_PASSWORD', 'password')
-
-if not neo4j_uri or not neo4j_user or not neo4j_password:
-    raise ValueError('NEO4J_URI, NEO4J_USER, and NEO4J_PASSWORD must be set')
-
-
 async def main():
     #################################################
     # INITIALIZATION
@@ -64,7 +49,7 @@ async def main():
     #################################################
 
     # Initialize Graphiti with Neo4j connection
-    graphiti = Graphiti(neo4j_uri, neo4j_user, neo4j_password)
+    graphiti = await create_graphiti()
 
     try:
         #################################################

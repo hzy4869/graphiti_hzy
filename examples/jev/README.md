@@ -1,5 +1,24 @@
 # Jev dedupe with FalkorDB
 
+## DeepSeek + Ollama + Neo4j comparison in this fork
+
+`modified.py` runs the same four-episode timeline using the provider setup from
+`examples/quickstart/quickstart_deepseek_ollama_neo4j.py`. It uses DeepSeek for
+extraction, entity deduplication, and fact resolution; local Ollama `bge-m3`
+for embeddings; and the Neo4j connection in the repository-root `.env`.
+No Jev or OpenAI API key is needed. Start Ollama and run from the repository root:
+
+```powershell
+.\.venv\Scripts\python.exe examples\jev\modified.py
+```
+
+The script prints the extracted entities and facts after each episode, then
+lists all facts with `valid_at`, `invalid_at`, and `expired_at`. Each run gets a
+new `group_id` and leaves existing graph data intact. DeepSeek's extraction
+and contradiction decisions can differ from the Jev example's output.
+
+The requirements and commands below apply to the original Jev/FalkorDB script.
+
 This example routes node deduplication and edge resolution to Jev. OpenAI
 `gpt-6-luna` handles extraction, summaries, and all other prompts. The example
 adds four episodes in order. The episodes show a name variant, a repeated

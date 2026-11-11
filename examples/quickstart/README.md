@@ -1,5 +1,18 @@
 # Graphiti Quickstart Example
 
+For this fork's Neo4j quickstart, `quickstart_neo4j.py` uses DeepSeek for extraction,
+Ollama `bge-m3` for local embeddings, and the Neo4j connection in the repository-root
+`.env`. Set `DEEPSEEK_API_KEY`, `NEO4J_URI`, `NEO4J_USER`, and `NEO4J_PASSWORD` there;
+`NEO4J_DATABASE` is optional because the script detects the default database.
+Install this fork with `pip install -e .` from the repository root, start Ollama,
+run `ollama pull bge-m3`, and then run:
+
+```powershell
+.\.venv\Scripts\python.exe examples\quickstart\quickstart_neo4j.py
+```
+
+The remaining quickstart scripts retain their original provider requirements below.
+
 This example demonstrates the basic functionality of Graphiti, including:
 
 1. Connecting to a Neo4j or FalkorDB database

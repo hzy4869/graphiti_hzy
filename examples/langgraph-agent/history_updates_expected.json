@@ -1,0 +1,274 @@
+{
+  "case_id": "updates_01",
+  "user_turns": 21,
+  "changes_after_initial": 20,
+  "expected_final": {
+    "size": "US men's 9",
+    "budget_usd": 90,
+    "color": "black",
+    "avoid_materials": [
+      "wool"
+    ]
+  },
+  "snapshots": [
+    {
+      "user_turn": 1,
+      "timestamp": "2026-10-01T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 8",
+        "budget_usd": 120,
+        "color": "white",
+        "avoid_materials": [
+          "wool"
+        ]
+      }
+    },
+    {
+      "user_turn": 2,
+      "timestamp": "2026-10-02T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 120,
+        "color": "white",
+        "avoid_materials": [
+          "wool"
+        ]
+      }
+    },
+    {
+      "user_turn": 3,
+      "timestamp": "2026-10-03T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 150,
+        "color": "white",
+        "avoid_materials": [
+          "wool"
+        ]
+      }
+    },
+    {
+      "user_turn": 4,
+      "timestamp": "2026-10-04T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 150,
+        "color": "black",
+        "avoid_materials": [
+          "wool"
+        ]
+      }
+    },
+    {
+      "user_turn": 5,
+      "timestamp": "2026-10-05T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 150,
+        "color": "black",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 6,
+      "timestamp": "2026-10-06T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 10",
+        "budget_usd": 150,
+        "color": "black",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 7,
+      "timestamp": "2026-10-07T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 10",
+        "budget_usd": 110,
+        "color": "black",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 8,
+      "timestamp": "2026-10-08T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 10",
+        "budget_usd": 110,
+        "color": "grey",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 9,
+      "timestamp": "2026-10-09T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 10",
+        "budget_usd": 110,
+        "color": "grey",
+        "avoid_materials": [
+          "synthetic materials"
+        ]
+      }
+    },
+    {
+      "user_turn": 10,
+      "timestamp": "2026-10-10T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 8.5",
+        "budget_usd": 110,
+        "color": "grey",
+        "avoid_materials": [
+          "synthetic materials"
+        ]
+      }
+    },
+    {
+      "user_turn": 11,
+      "timestamp": "2026-10-11T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 8.5",
+        "budget_usd": 80,
+        "color": "grey",
+        "avoid_materials": [
+          "synthetic materials"
+        ]
+      }
+    },
+    {
+      "user_turn": 12,
+      "timestamp": "2026-10-12T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 8.5",
+        "budget_usd": 80,
+        "color": "blue",
+        "avoid_materials": [
+          "synthetic materials"
+        ]
+      }
+    },
+    {
+      "user_turn": 13,
+      "timestamp": "2026-10-13T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 8.5",
+        "budget_usd": 80,
+        "color": "blue",
+        "avoid_materials": [
+          "wool",
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 14,
+      "timestamp": "2026-10-14T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 11",
+        "budget_usd": 80,
+        "color": "blue",
+        "avoid_materials": [
+          "wool",
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 15,
+      "timestamp": "2026-10-15T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 11",
+        "budget_usd": 130,
+        "color": "blue",
+        "avoid_materials": [
+          "wool",
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 16,
+      "timestamp": "2026-10-16T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 11",
+        "budget_usd": 130,
+        "color": "beige",
+        "avoid_materials": [
+          "wool",
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 17,
+      "timestamp": "2026-10-17T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 11",
+        "budget_usd": 130,
+        "color": "beige",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 18,
+      "timestamp": "2026-10-18T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 130,
+        "color": "beige",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 19,
+      "timestamp": "2026-10-19T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 90,
+        "color": "beige",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 20,
+      "timestamp": "2026-10-20T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 90,
+        "color": "black",
+        "avoid_materials": [
+          "leather"
+        ]
+      }
+    },
+    {
+      "user_turn": 21,
+      "timestamp": "2026-10-21T12:00:00+00:00",
+      "expected_current": {
+        "size": "US men's 9",
+        "budget_usd": 90,
+        "color": "black",
+        "avoid_materials": [
+          "wool"
+        ]
+      }
+    }
+  ],
+  "evaluation_question": "State my current shoe size, maximum budget, required color, and material restrictions, then recommend shoes for these needs. Use my latest requirements and say when no match can be verified.",
+  "scoring_note": "Score four final requirements independently; record stale-value errors and unsupported product claims separately. Do not send this file to LLMs.",
+  "catalog_note": "The final budget is 90 USD. The supplied catalog prices for adult shoes are 98, 100 and 120 USD; none is within this budget. Socks are not shoes, and kids sizes are not US men's 9. Correctly declining to assert a match counts as a valid outcome. Missing graph prices must be acknowledged."
+}
